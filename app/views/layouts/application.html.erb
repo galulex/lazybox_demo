@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lazybox</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta name="title" content="LazyBox" />
+  <meta name="description" content="Lazybox is a jQuery-based, lightbox that can display entire remote pages, images and confirmation dialogs. Replace standard rails confirmations with lazybox just added several rows to your project. Use lazybox with rails assets pipeline." />
+  <meta name="popup" content="Rails popup windows" />
+  <meta name="modal" content="Rails modal dialogs" />
+  <meta name="confirmation" content="Rails custom confirmation dialogs" />
+  <meta name="url" content="https://rubygems.org/gems/lazybox" />
+</head>
+<body>
+  <div class='body'>
+    <%= yield %>
+  </div>
+
+</body>
+</html>

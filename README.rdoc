@@ -1,0 +1,1 @@
+This is the demo app for ![LazyBox](https://github.com/alex-galushka/lazybox)
