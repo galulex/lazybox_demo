@@ -13,7 +13,7 @@ $(document).ready(function() {
   $('a#new_task_link').lazybox();
   $('a[rel*=lazybox]').lazybox({close: false, modal: false, opacity: 0.7, klass: 'lazybox'});
 
-  $.lazybox.settings = {niceClose: false, cancelClass: "button green", submitClass: 'button red'}
+  $.lazybox.settings = {cancelClass: "button green", submitClass: 'button red'}
   $.rails.allowAction = $.lazybox.confirm;
 
 });
