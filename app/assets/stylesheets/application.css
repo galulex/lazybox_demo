@@ -166,3 +166,11 @@ tfoot tr td {
 .lazybox {
   background: transparent !important;
 }
+
+#lazybox_close.img {
+  background: url('close.png') no-repeat;
+  width: 32px;
+  height: 32px;
+  top: -17px;
+  right: -17px;
+}

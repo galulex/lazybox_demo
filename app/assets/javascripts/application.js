@@ -10,7 +10,7 @@
 //= require_tree .
 
 $(document).ready(function() {
-  $('a#new_task_link').lazybox();
+  $('a#show_task_link').lazybox({closeImg: true});
   $('a[rel*=lazybox]').lazybox({close: false, modal: false, opacity: 0.7, klass: 'lazybox'});
 
   $.lazybox.settings = {cancelClass: "button green", submitClass: 'button red'}
