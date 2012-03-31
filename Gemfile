@@ -10,9 +10,9 @@ group :production do
   gem "pg"
 end
 
-group :developmemt, :test do
-  gem 'sqlite3'
-end
+#group :developmemt, :test do
+  #gem 'sqlite3'
+#end
 
 gem 'json'
 gem 'lazybox', '=0.1.5'
