@@ -10,12 +10,12 @@ group :production do
   gem "pg"
 end
 
-#group :developmemt, :test do
-  #gem 'sqlite3'
-#end
+group :development, :test do
+  gem 'sqlite3'
+end
 
 gem 'json'
-gem 'lazybox', '=0.1.5'
+gem 'lazybox', '=0.1.6'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
