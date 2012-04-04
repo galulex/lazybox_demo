@@ -174,3 +174,26 @@ tfoot tr td {
   top: -17px;
   right: -17px;
 }
+
+#lazybox.sticker {
+  -webkit-border-bottom-left-radius: 20px 500px;
+  -webkit-border-bottom-right-radius: 500px 30px;
+  -webkit-border-top-right-radius: 5px 100px;
+  -moz-border-radius-bottomleft: 20px 500px;
+  -moz-border-radius-bottomright: 500px 30px;
+  -moz-border-radius-topright: 5px 100px;
+  border-radius-bottomleft: 20px 500px;
+  border-radius-bottomright: 500px 30px;
+  border-radius-topright: 5px 100px;
+  background: #FCF59B;
+  border-bottom-left-radius: 20px 500px;
+  border-bottom-right-radius: 500px 30px;
+  border-top-right-radius: 5px 100px;
+}
+
+#lazybox.top {
+  border-radius: 0px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: none;
+}

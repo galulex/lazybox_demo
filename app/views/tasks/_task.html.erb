@@ -2,7 +2,7 @@
   <td><%= truncate task.name %></td>
   <td><%= truncate task.description %></td>
   <td>
-    <%= link_to 'Show', task, :id => 'show_task_link' %>
+    <%= link_to 'Show', task, :remote => true %>
     <%= link_to 'Edit', edit_task_path(task), :remote => true %>
     <%= link_to 'Destroy', task, :confirm => 'Are you sure you want to delete this entry? This is an irreversible action.', :method => :delete, :remote => true %>
   </td>

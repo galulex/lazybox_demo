@@ -9,7 +9,6 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(params[:id])
-    render :layout => false #we use lazybox.
   end
 
   def new

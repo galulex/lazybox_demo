@@ -15,7 +15,7 @@ group :development, :test do
 end
 
 gem 'json'
-gem 'lazybox', '=0.1.7'
+gem 'lazybox', '=0.1.8'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

@@ -1,1 +1,1 @@
-$.lazybox("<%= escape_javascript(render :partial => 'form') %>");
+$.lazybox("<%= j(render :partial => 'form') %>", {onTop: true, klass: 'top', close: false});
