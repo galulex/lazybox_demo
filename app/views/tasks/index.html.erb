@@ -3,6 +3,14 @@
 <h3><%= link_to 'LazyBox Gem', 'https://github.com/alex-galushka/lazybox', :target => '_blank' %></h3>
 <br />
 <p>Lazybox is a jQuery-based, lightbox that can display entire remote pages, images and confirmation dialogs. Replace standard rails confirmations with lazybox just added several rows to your project. Use lazybox with rails assets pipeline.</p>
+<br />
+<i>Click on <b>New Task link</b> to see lazybox slide animation</i>
+<br />
+<i>Click on <b>Show link</b> to see lazybox with custom class</i>
+<br />
+<i>Click on <b>Edit link</b> to see standard lazybox</i>
+<br />
+<i>Click on <b>Destroy link</b> lazybox confirmation dialog</i>
 <table>
   <caption><h2>Listing tasks</h2></caption>
   <thead>
@@ -40,3 +48,15 @@
     <%= image_tag "http://cs11247.userapi.com/u33085317/-14/x_944551cd.jpg", :height => 100 %>
   <% end %>
 </div>
+<br />
+<h2>Video</h2>
+  <%= link_to "Clich here to video in lazybox", "", :id => 'youtube_player' %>
+
+  <script>
+    $(document).ready(function(){
+      $('a#youtube_player').click(function(e){
+        e.preventDefault()
+        $.lazybox("<%= j(render :partial => 'layouts/player') %>", {niceClose: true, opacity: 0.7, speed: 500, klass: 'player'});
+      })
+    })
+  </script>

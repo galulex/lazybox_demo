@@ -10,7 +10,7 @@
 //= require_tree .
 
 $(document).ready(function() {
-  $('a[rel*=lazybox]').lazybox({close: false, modal: false, opacity: 0.7, klass: 'lazybox'});
+  $('a[rel*=lazybox]').lazybox({close: false, modal: false, opacity: 0.7, klass: 'lazybox', speed: 200});
 
   $.lazybox.settings = {cancelClass: "button green", submitClass: 'button red', closeImg: false, niceClose: false}
   $.rails.allowAction = $.lazybox.confirm;
