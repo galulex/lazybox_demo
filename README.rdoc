@@ -1,3 +1,3 @@
-This is the demo app for https://github.com/alex-galushka/lazybox
+This is the demo app for https://github.com/galulex/lazybox
 
 Live Demo http://lazybox.herokuapp.com/
