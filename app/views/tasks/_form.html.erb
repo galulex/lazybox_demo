@@ -1,10 +1,11 @@
-<%= form_for @task, :remote => true do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= error_tag @task.errors[:name] %>
-  <%= f.label :description %>
-  <%= f.text_area :description %>
-  <%= error_tag @task.errors[:description] %>
-  <br />
-  <%= f.submit %>
+<%= form_for @task, remote: true do |f| %>
+  <fieldset>
+    <legend>Task</legend>
+    <%= f.text_field :name, placeholder: 'Name' %>
+    <%= error_tag @task.errors[:name] %>
+    <%= f.text_area :description, placeholder: 'Description', rows: 5 %>
+    <%= error_tag @task.errors[:description] %>
+    <br />
+    <%= f.submit %>
+  </fieldset>
 <% end %>
