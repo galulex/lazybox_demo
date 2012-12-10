@@ -112,6 +112,7 @@ h1, h2 {
 }
 
 #{$all-text-inputs}, textarea {
+  margin-top: 10px;
   padding: 3px 5px;
   color: gray;
   font-size: 22px;
@@ -123,7 +124,8 @@ h1, h2 {
 }
 
 input[type=submit] {
-  width: 360px;
+  margin-top: 10px;
+  width: 365px;
   padding: 3px 5px;
   @include button(shiny, #FF05FF);
   font-size: 22px;
