@@ -1,3 +1,5 @@
+[![endorse](http://api.coderwall.com/galulex/endorsecount.png)](http://coderwall.com/galulex)
+
 This is the demo app for https://github.com/galulex/lazybox
 
 Live Demo http://lazybox.herokuapp.com/
