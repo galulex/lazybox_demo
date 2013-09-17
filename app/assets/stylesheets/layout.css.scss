@@ -1,53 +1,24 @@
 body {
-  padding: 0;
-  margin: 0;
-  background-color: #222;
-  font-size: 14px;
-  font-family: $lucida-grande;
-  @include box-shadow( inset 0 0 200px black);
+  background:
+  radial-gradient(black 15%, transparent 16%) 0 0,
+  radial-gradient(black 15%, transparent 16%) 8px 8px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+  background-color:#282828;
+  background-size:16px 16px;
 }
-
-* { color: yellow }
 
 .body {
-  margin: 0 auto;
-  max-width: 900px;
-  padding-top: 20px;
-}
-
-h1.title {
-  margin-top: 0;
-  font-size: 54px;
-  text-shadow: 1px 1px 2px black, 0 0 1em red;
-}
-
-a {
-  color: magenta;
-}
-
-a.btn {
-  @include button(shiny, #02FFFF);
-  font-size: 24px;
-}
-
-a.btn-lime {
-  @include button(shiny, lime);
-}
-
-a.btn-red {
-  @include button(shiny, red);
-}
-
-#lazybox.lazybox {
-  background: transparent;
-  padding: 0;
-  border: 5px solid #222;
-  border-radius: 0;
-  @include box-shadow(0 0 50px 10px cyan);
+  border-left: 5px solid #e2e2e2;
+  border-right: 5px solid #e2e2e2;
+  background: white;
+  padding: 20px 40px;
+  box-shadow: 0 8px 6px -6px black;
+  background: url(background.png) repeat;
 }
 
 #lazybox_close.img {
-  background: url(close-img.png) no-repeat;
+  background: url(pin.png) no-repeat;
   width: 48px;
   height: 48px;
   top: -25px;
@@ -58,96 +29,41 @@ a.btn-red {
   border: none;
   background: #222;
   border-radius: 0;
-  @include box-shadow(0 0 50px 10px magenta);
+  box-shadow: 0 0 50px 10px cyan;
 }
-
-#lazybox_body > * { display: block; }
 
 #lazybox.confirm {
   border-radius: 0;
   border: 3px solid #222;
-  @include box-shadow(0 0 50px 10px magenta);
-  @include linear-gradient(gray, #222);
+  background: linear-gradient(#e2e2e2, white);
   a#lazybox_close { display: none; }
 }
 
-h1, h2 {
-  color: cyan;
+#lazybox.sticker {
+  border-radius-bottomleft: 20px 500px;
+  border-radius-bottomright: 500px 30px;
+  border-radius-topright: 5px 100px;
+  background: #FCF59B;
+  border-bottom-left-radius: 20px 500px;
+  border-bottom-right-radius: 500px 30px;
+  border-top-right-radius: 5px 100px;
 }
 
-#lazybox form {
-  width: 400px;
-  fieldset {
-    border: 1px solid black;
-    padding: 20px;
-    @include box-shadow(inset 0 0 30px #292929);
-    border-radius: 5px;
-    legend {
-      border-radius: 5px;
-      padding: 10px;
-      color: magenta;
-      font-size: 24px;
-      font-weight: bold;
-      border: 1px solid black;
-    }
-  }
-}
+#lazybox_body > * { display: block; }
 
-#lazybox.custom {
-  @include linear-gradient(#222, #333);
-  border: 1px solid #0E0E0E;
-  @include box-shadow(0 0 50px 10px magenta);
-  a#lazybox_close {
-    color: cyan;
-    top: -10px;
-    right: 10px;
-    font: bold 54px/100% Arial, Helvetica, sans-serif;
-    &:hover { color: magenta; }
-  }
-}
+.error { color: red; font-style: italic; }
 
 #lazybox.top {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
-#{$all-text-inputs}, textarea {
-  margin-top: 10px;
-  padding: 3px 5px;
-  color: gray;
-  font-size: 22px;
-  width: 350px;
-  border: 1px solid white;
-  resize: none;
-  @include box-shadow(0 0 5px 1px cyan);
-  @include linear-gradient(white, lightYellow);
+#lazybox.lazybox {
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 
-input[type=submit] {
-  margin-top: 10px;
-  width: 365px;
-  padding: 3px 5px;
-  @include button(shiny, #FF05FF);
-  font-size: 22px;
-}
+table { width: 100%; }
 
-input[type=text]:focus, textarea:focus {
-  @include box-shadow(0 0 5px 1px magenta);
-}
-
-.error { color: red; font-style: italic; }
-
-td, th {
-  padding: 5px 10px;
-  border-bottom: 1px solid gray;
-}
-
-tfoot td { border: none; }
-
-table { border-collapse: collapse; }
-
-#lazybox.sticker {
-  background: #222;
-}
-
-caption { text-align: left; }
+a { text-decoration: none; }

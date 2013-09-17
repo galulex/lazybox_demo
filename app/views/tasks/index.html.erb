@@ -1,8 +1,11 @@
-<h1 class="title">LazyBox Demo</h1>
-<h3>
-  <%= link_to 'Source Code', 'https://github.com/galulex/lazybox_demo', :target => '_blank' %> |
-  <%= link_to 'LazyBox Gem', 'https://github.com/galulex/lazybox', :target => '_blank' %>
-</h3>
+<h1 class="title">LazyBox</h1>
+<%= link_to 'https://github.com/galulex/lazybox_demo', class: 'pure-button pure-button-primary', :target => '_blank' do %>
+  <i class='icon-github'> Source Code</i>
+<% end %>
+
+<%= link_to 'https://github.com/galulex/lazybox', class: 'pure-button pure-button-primary', :target => '_blank' do %>
+  <i class='icon-ruby'> LazyBox Gem</i>
+<% end %>
 <p>Lazybox is a jQuery-based, lightbox that can display entire remote pages, images and confirmation dialogs. Replace standard rails confirmations with lazybox just added several rows to your project. Use lazybox with rails assets pipeline.</p>
 <i>Click on <b>New Task link</b> to see lazybox slide animation</i>
 <br />
@@ -12,17 +15,15 @@
 <br />
 <i>Click on <b>Destroy link</b> to see lazybox confirmation dialog</i>
 <br />
-<table>
+<table class='pure-table pure-table-horizontal pure-table-striped'>
   <caption><h2>Listing tasks</h2></caption>
   <tbody>
     <%= render @tasks %>
-  </tbody>
-  <tfoot>
-    <tr>
-      <td><%= link_to 'New Task', new_task_path, :remote => true, class: 'btn' %></td>
-    </tr>
-  </tfoot>
 </table>
+<br />
+<%= link_to new_task_path, remote: true, class: 'pure-button pure-button-primary' do %>
+  <i class='icon-plus-sign'> New Task</i>
+<% end %>
 <br />
 <h2>Images</h2>
 <div>
@@ -43,8 +44,9 @@
   <% end %>
 </div>
 <br />
-<h2>Video</h2>
-  <%= link_to "Clich here to video in lazybox", "", :id => 'youtube_player' %>
+<%= link_to "", class: 'pure-button pure-button-primary', id: 'youtube_player' do %>
+  <i class='icon-youtube'> Video in LazyBox</i>
+<% end %>
 
   <script>
     $(document).ready(function(){

@@ -12,7 +12,7 @@
 $(document).ready(function() {
   $('a[rel*=lazybox]').lazybox({close: false, modal: false, opacity: 0.7, klass: 'lazybox', speed: 200});
 
-  $.lazybox.settings = {cancelClass: "btn-lime", submitClass: 'btn-red'}
+  $.lazybox.settings = {cancelClass: "pure-button", submitClass: 'pure-button pure-button-primary'}
   $.rails.allowAction = $.lazybox.confirm;
 
 });
