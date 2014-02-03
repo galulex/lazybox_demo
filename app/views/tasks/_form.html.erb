@@ -1,0 +1,16 @@
+<%= form_for @task, html: { class: 'pure-form pure-g', remote: true } do |f| %>
+  <fieldset class='pure-u-1'>
+    <legend>Task</legend>
+    <p>
+      <%= f.text_field :name, placeholder: 'Name', class: 'pure-u-1' %>
+      <%= error_tag @task.errors[:name] %>
+    </p>
+    <p>
+      <%= f.text_area :description, placeholder: 'Description', rows: 5, class: 'pure-u-1' %>
+      <%= error_tag @task.errors[:description] %>
+    </p>
+    <%= button_tag class: 'pure-button pure-button-primary' do %>
+      <i class='icon-ok-circle'> OK</i>
+    <% end %>
+  </fieldset>
+<% end %>

@@ -1,0 +1,58 @@
+<h1 class="title">LazyBox</h1>
+<%= link_to 'https://github.com/galulex/lazybox_demo', class: 'pure-button pure-button-primary', :target => '_blank' do %>
+  <i class='icon-github'> Source Code</i>
+<% end %>
+
+<%= link_to 'https://github.com/galulex/lazybox', class: 'pure-button pure-button-primary', :target => '_blank' do %>
+  <i class='icon-ruby'> LazyBox Gem</i>
+<% end %>
+<p>Lazybox is a jQuery-based, lightbox that can display entire remote pages, images and confirmation dialogs. Replace standard rails confirmations with lazybox just added several rows to your project. Use lazybox with rails assets pipeline.</p>
+<i>Click on <b>New Task link</b> to see lazybox slide animation</i>
+<br />
+<i>Click on <b>Task name</b> to see lazybox with custom class</i>
+<br />
+<i>Click on <b>Edit link</b> to see standard lazybox</i>
+<br />
+<i>Click on <b>Destroy link</b> to see lazybox confirmation dialog</i>
+<br />
+<table class='pure-table pure-table-horizontal pure-table-striped'>
+  <caption><h2>Listing tasks</h2></caption>
+  <tbody>
+    <%= render @tasks %>
+</table>
+<br />
+<%= link_to new_task_path, remote: true, class: 'pure-button pure-button-primary' do %>
+  <i class='icon-plus-sign'> New Task</i>
+<% end %>
+<br />
+<h2>Images</h2>
+<div>
+  <%= link_to "http://cs11247.userapi.com/u33085317/-14/x_f9110229.jpg", :rel => :lazybox do %>
+    <%= image_tag "http://cs11247.userapi.com/u33085317/-14/x_f9110229.jpg", :height => 100 %>
+  <% end %>
+  <%= link_to "http://cs5965.userapi.com/u33085317/-14/x_b3ce2b54.jpg", :rel => :lazybox do %>
+    <%= image_tag "http://cs5965.userapi.com/u33085317/-14/x_b3ce2b54.jpg", :height => 100 %>
+  <% end %>
+  <%= link_to "http://cs5965.userapi.com/u33085317/-14/x_fd03805f.jpg", :rel => :lazybox do %>
+    <%= image_tag "http://cs5965.userapi.com/u33085317/-14/x_fd03805f.jpg", :height => 100 %>
+  <% end %>
+  <%= link_to "http://cs11247.userapi.com/u33085317/-14/x_b27c3de8.jpg", :rel => :lazybox do %>
+    <%= image_tag "http://cs11247.userapi.com/u33085317/-14/x_b27c3de8.jpg", :height => 100 %>
+  <% end %>
+  <%= link_to "http://cs11247.userapi.com/u33085317/-14/x_944551cd.jpg", :rel => :lazybox do %>
+    <%= image_tag "http://cs11247.userapi.com/u33085317/-14/x_944551cd.jpg", :height => 100 %>
+  <% end %>
+</div>
+<br />
+<%= link_to "", class: 'pure-button pure-button-primary', id: 'youtube_player' do %>
+  <i class='icon-youtube'> Video in LazyBox</i>
+<% end %>
+
+  <script>
+    $(document).ready(function(){
+      $('a#youtube_player').click(function(e){
+        e.preventDefault()
+        $.lazybox("<%= j(render :partial => 'layouts/player') %>", {niceClose: true, opacity: 0.7, speed: 500, klass: 'player'});
+      })
+    })
+  </script>
