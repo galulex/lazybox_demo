@@ -14,11 +14,11 @@ body {
   background: white;
   padding: 20px 40px;
   box-shadow: 0 8px 6px -6px black;
-  background: image-url(background.png) repeat;
+  background: image-url('background.png') repeat;
 }
 
 #lazybox_close.img {
-  background: image-url(pin.png) no-repeat;
+  background: image-url('pin.png') no-repeat;
   width: 48px;
   height: 48px;
   top: -25px;
