@@ -9,9 +9,10 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'pure-css-rails'
 gem 'webhostinghub-glyphs-rails'
-gem 'lazybox'
+gem 'lazybox', '3.0.0.beta1'
 gem 'jbuilder', '~> 1.2'
 gem 'thin'
+gem 'thelpers'
 
 group :production do
   gem 'rails_12factor'

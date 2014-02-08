@@ -17,7 +17,7 @@ body {
   background: image-url('background.png') repeat;
 }
 
-#lazybox_close.img {
+#lazy_close.img {
   background: image-url('pin.png') no-repeat;
   width: 48px;
   height: 48px;
@@ -49,14 +49,7 @@ body {
   border-top-right-radius: 5px 100px;
 }
 
-#lazybox_body > * { display: block; }
-
 .error { color: red; font-style: italic; }
-
-#lazybox.top {
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-}
 
 #lazybox.lazybox {
   padding: 0;
@@ -67,4 +60,4 @@ body {
 table { width: 100%; }
 
 a { text-decoration: none; }
-form { min-width: 400px; }
+form { min-width: 300px; }

@@ -7,12 +7,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require lazybox
-//= require_tree .
 
 $(document).ready(function() {
-  $('a[rel*=lazybox]').lazybox({close: false, modal: false, opacity: 0.7, klass: 'lazybox', speed: 200});
+  $('a[rel*=lazybox]').lazybox({ close: false, modal: false, opacity: 0.7, klass: 'lazybox' });
 
-  $.lazybox.settings = {cancelClass: "pure-button", submitClass: 'pure-button pure-button-primary'}
+  $.lazybox.settings = { cancelClass: "pure-button", submitClass: 'pure-button pure-button-primary' }
   $.rails.allowAction = $.lazybox.confirm;
 
 });
