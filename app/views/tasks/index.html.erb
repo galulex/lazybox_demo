@@ -1,9 +1,9 @@
 <h1 class="title">LazyBox</h1>
-<%= link_to 'https://github.com/galulex/lazybox_demo', class: 'pure-button pure-button-primary', :target => '_blank' do %>
+<%= link_to 'https://github.com/galulex/lazybox_demo', class: 'pure-button pure-button-primary', target: '_blank' do %>
   <i class='icon-github'> Source Code</i>
 <% end %>
 
-<%= link_to 'https://github.com/galulex/lazybox', class: 'pure-button pure-button-primary', :target => '_blank' do %>
+<%= link_to 'https://github.com/galulex/lazybox', class: 'pure-button pure-button-primary', target: '_blank' do %>
   <i class='icon-ruby'> LazyBox Gem</i>
 <% end %>
 <p>Lazybox is a jQuery-based, lightbox that can display entire remote pages, images and confirmation dialogs. Replace standard rails confirmations with lazybox just added several rows to your project. Use lazybox with rails assets pipeline.</p>
@@ -26,21 +26,12 @@
 <% end %>
 <br />
 <h2>Images</h2>
+<p>LazyBox easy to integrate with image sliders. Here an example with
+  <%= link_to 'Glide.js', 'http://jedrzejchalubek.com/glide', target: '_blank' %>
+</p>
 <div>
-  <%= link_to "http://cs11247.userapi.com/u33085317/-14/x_f9110229.jpg", :rel => :lazybox do %>
-    <%= image_tag "http://cs11247.userapi.com/u33085317/-14/x_f9110229.jpg", :height => 100 %>
-  <% end %>
-  <%= link_to "http://cs5965.userapi.com/u33085317/-14/x_b3ce2b54.jpg", :rel => :lazybox do %>
-    <%= image_tag "http://cs5965.userapi.com/u33085317/-14/x_b3ce2b54.jpg", :height => 100 %>
-  <% end %>
-  <%= link_to "http://cs5965.userapi.com/u33085317/-14/x_fd03805f.jpg", :rel => :lazybox do %>
-    <%= image_tag "http://cs5965.userapi.com/u33085317/-14/x_fd03805f.jpg", :height => 100 %>
-  <% end %>
-  <%= link_to "http://cs11247.userapi.com/u33085317/-14/x_b27c3de8.jpg", :rel => :lazybox do %>
-    <%= image_tag "http://cs11247.userapi.com/u33085317/-14/x_b27c3de8.jpg", :height => 100 %>
-  <% end %>
-  <%= link_to "http://cs11247.userapi.com/u33085317/-14/x_944551cd.jpg", :rel => :lazybox do %>
-    <%= image_tag "http://cs11247.userapi.com/u33085317/-14/x_944551cd.jpg", :height => 100 %>
+  <%= link_to images_path, remote: true do %>
+    <%= image_tag "http://cs11247.userapi.com/u33085317/-14/x_f9110229.jpg", height: 100 %>
   <% end %>
 </div>
 <br />
@@ -52,7 +43,7 @@
     $(document).ready(function(){
       $('a#youtube_player').click(function(e){
         e.preventDefault()
-        $.lazybox("<%= j(render :partial => 'layouts/player') %>", {niceClose: true, opacity: 0.7, speed: 500, klass: 'player'});
+        $.lazybox("<%= j(render partial: 'layouts/player') %>", { opacity: 0.7, speed: 500, klass: 'player' });
       })
     })
   </script>

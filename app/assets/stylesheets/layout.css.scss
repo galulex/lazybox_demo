@@ -55,9 +55,15 @@ body {
   padding: 0;
   border: 0;
   background: transparent;
+  width: 45%;
+  box-shadow: none;
+  ul li { list-style: none; }
+  img { width: 100%; }
 }
 
 table { width: 100%; }
 
 a { text-decoration: none; }
 form { min-width: 300px; }
+
+.slide { width: 50%; }
