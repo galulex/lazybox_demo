@@ -6,8 +6,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require turbolinks
 //= require lazybox
 //= require jquery.glide.min
+//= require_tree .
 
 $(document).ready(function() {
 

@@ -49,6 +49,25 @@ body {
   border-top-right-radius: 5px 100px;
 }
 
+#lazybox.spinner {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  i {
+    width: 128px;
+    height: 158px;
+    font-size: 128px;
+    color: white;
+    position: absolute;
+    -webkit-animation:spin 2s linear infinite;
+    -moz-animation:spin 2s linear infinite;
+    animation:spin 2s linear infinite;
+  }
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
 .error { color: red; font-style: italic; }
 
 #lazybox.lazybox {
