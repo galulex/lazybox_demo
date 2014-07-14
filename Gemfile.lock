@@ -49,7 +49,7 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
-    lazybox (1.0.1)
+    lazybox (1.0.2)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -131,7 +131,7 @@ DEPENDENCIES
   coffee-rails
   jbuilder (~> 1.2)
   jquery-rails
-  lazybox (= 1.0.1)
+  lazybox
   pg
   pure-css-rails
   rails (= 4.1.4)
