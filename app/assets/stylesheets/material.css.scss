@@ -1,0 +1,50 @@
+$deep: false;
+
+$primary: #428bca !default;
+$error:   #d9534f !default;
+$success: #5cb85c !default;
+$warning: #f0ad4e !default;
+
+$inputs-padding: 5px !default;
+$input-border-width: 0 0 1px 0 !default;
+$input-focus-border-color: $primary !default;
+$input-focus-border-width: 0 0 3px 0 !default;
+$input-focus-padding: 5px 5px 3px 5px !default;
+$input-border-radius: 0;
+
+$select-border-width: 0 0 1px 0 !default;
+$select-border-radius: 0;
+
+$radio-focus-border-color: $primary !default;
+$radio-color: $primary !default;
+
+.group {
+  position: relative;
+  label {
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    color: #999;
+    font-size: 1em;
+    transition: top .3s ease, color .3s ease, font-size .3s ease;
+  }
+  input:focus ~ label, input-valid ~ label, input:invalid ~ label {
+    font-size: .8em;
+    top: -20px;
+    color: #5264AE;
+  }
+}
+
+
+@-webkit-keyframes input-highlighter {
+  from { background: #5264AE; }
+  to { width:0; background: transparent; }
+}
+@-moz-keyframes input-highlighter {
+  from { background: #5264AE; }
+  to { width:0; background: transparent; }
+}
+@keyframes input-highlighter {
+  from { background: #5264AE; }
+  to { width:0; background: transparent; }
+}

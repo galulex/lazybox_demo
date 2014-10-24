@@ -1,13 +1,14 @@
 source 'https://rubygems.org'
 
-ruby '1.9.3'
-gem 'rails', '4.1.4'
+ruby '2.1.2'
+
+gem 'rails', '4.1.6'
 gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'pure-css-rails'
+gem 'picnic-rails', path: '/home/alex/picnic-rails'
 gem 'webhostinghub-glyphs-rails'
 gem 'lazybox'
 gem 'jbuilder', '~> 1.2'

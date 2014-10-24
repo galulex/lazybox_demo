@@ -13,11 +13,35 @@
   <meta name="url" content="https://rubygems.org/gems/lazybox" />
 </head>
 <body>
-  <div class='pure-g'>
-    <div class='pure-u-1-5'>
+
+  <nav class='transparent'>
+    <a href="#" class="main">
+      <img src="basket.svg" alt="Logo for Picnic CSS">Picnic
+    </a>
+
+    <!-- responsive -->
+    <input id="bmenu" class="burgercheck" type="checkbox">
+    <label for="bmenu" class="burgermenu"></label>
+    <!-- /responsive -->
+
+    <div class="menu">
+      <a href="#buttons">Buttons</a>
+      <a href="#grids">Grids</a>
+      <a href="#nav">Nav</a>
+      <a class="button primary" href="demo/">
+        Demo
+      </a>
+      <a class="button primary" href="https://github.com/picnicss/picnic">
+        Github
+      </a>
+    </div>
+  </nav>
+
+  <div class='row'>
+    <div class='fifth'>
       <a href="https://github.com/galulex"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub"></a>
     </div>
-    <div class='body pure-u-3-5'>
+    <div class='body full l-three-fifth'>
       <%= yield %>
     </div>
   </div>

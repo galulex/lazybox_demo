@@ -1,5 +1,19 @@
-@import 'pure';
+// $deep: false;
+
+// $inputs-border-color: red;
+// $inputs-border-weight: 3px;
+// $select-border-weight: 1px;
+// $radio-font-size: 74px;
+// $radio-body-weight: 14px;
+// $input-border-weight: 2px;
+// $checkbox-border-weight: 2px;
+// $select-border: none;
+// $radio-font-size: 60px;
+// $radio-body-weight: 10px;
+
 @import 'webhostinghub-glyphs';
+@import 'material';
+@import 'picnic';
 @import 'lazybox';
 @import 'layout';
 @import 'tasks';

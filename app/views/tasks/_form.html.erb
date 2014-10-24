@@ -1,15 +1,47 @@
 <%= form_for @task, html: { class: 'pure-form pure-g', remote: true } do |f| %>
   <fieldset class='pure-u-1'>
     <legend>Task</legend>
-    <p>
-      <%= f.text_field :name, placeholder: 'Name', class: 'pure-u-1' %>
+    <p class='group'>
+      <%= f.email_field :name, class: 'full' %>
+      <%= f.label :name %>
       <%= error_tag @task.errors[:name] %>
     </p>
     <p>
-      <%= f.text_area :description, placeholder: 'Description', rows: 5, class: 'pure-u-1' %>
-      <%= error_tag @task.errors[:description] %>
+      <%= label_tag :checkbox, class: :checkbox do %>
+        <%= check_box_tag :checkbox %>
+        <span>Checkbox</span>
+      <% end %>
     </p>
-    <%= button_tag class: 'pure-button pure-button-primary' do %>
+    <p>
+      <%= label_tag :radio_radio, class: :radio do %>
+        <%= radio_button_tag :radio, :radio %>
+        <span>Radio</span>
+      <% end %>
+    </p>
+    <p>
+      <%= label_tag :radio_radio, class: :radio do %>
+        <%= radio_button_tag :radio, :radio %>
+        <span>Radio</span>
+      <% end %>
+    </p>
+    <p>
+      <%= file_field_tag :file %>
+    </p>
+    <p>
+      <%= label_tag :select, class: :select do %>
+        <%= select_tag :select, options_for_select([:one, :two]) %>
+      <% end %>
+    </p>
+    <%= button_tag class: 'button warning' do %>
+      <i class='icon-ok-circle'> OK</i>
+    <% end %>
+    <%= button_tag class: 'button primary' do %>
+      <i class='icon-ok-circle'> OK</i>
+    <% end %>
+    <%= button_tag class: 'button error' do %>
+      <i class='icon-ok-circle'> OK</i>
+    <% end %>
+    <%= button_tag class: 'button success' do %>
       <i class='icon-ok-circle'> OK</i>
     <% end %>
   </fieldset>

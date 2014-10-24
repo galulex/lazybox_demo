@@ -13,7 +13,7 @@
 
 $(document).ready(function() {
 
-  $.lazybox.settings = { cancelClass: "pure-button", submitClass: 'pure-button pure-button-primary' }
+  $.lazybox.settings = { cancelClass: 'button dull', submitClass: 'button' }
   $.rails.allowAction = $.lazybox.confirm;
 
 });
