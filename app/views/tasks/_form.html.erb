@@ -1,11 +1,11 @@
 <%= form_for @task, html: { class: 'pure-form pure-g', remote: true } do |f| %>
   <fieldset class='pure-u-1'>
     <legend>Task</legend>
-    <p class='group'>
+    <div class='group'>
       <%= f.email_field :name, class: 'full' %>
       <%= f.label :name %>
       <%= error_tag @task.errors[:name] %>
-    </p>
+    </div>
     <p>
       <%= label_tag :checkbox, class: :checkbox do %>
         <%= check_box_tag :checkbox %>
@@ -13,14 +13,14 @@
       <% end %>
     </p>
     <p>
-      <%= label_tag :radio_radio, class: :radio do %>
-        <%= radio_button_tag :radio, :radio %>
+      <%= label_tag :radio_1, class: :radio do %>
+        <%= radio_button_tag :radio, 1 %>
         <span>Radio</span>
       <% end %>
     </p>
     <p>
-      <%= label_tag :radio_radio, class: :radio do %>
-        <%= radio_button_tag :radio, :radio %>
+      <%= label_tag :radio_2, class: :radio do %>
+        <%= radio_button_tag :radio, 2 %>
         <span>Radio</span>
       <% end %>
     </p>
